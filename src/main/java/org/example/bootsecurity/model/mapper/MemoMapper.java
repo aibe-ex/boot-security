@@ -1,5 +1,6 @@
 package org.example.bootsecurity.model.mapper;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -20,4 +21,7 @@ public interface MemoMapper {
     @Insert("INSERT INTO memo (text) VALUES (#{text})")
 //    @Options(useGeneratedKeys = true, keyProperty = "id")
     void insert(Memo memo);
+
+    @Delete("DELETE FROM memo")
+    void deleteAll();
 }
