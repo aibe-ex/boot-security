@@ -13,4 +13,8 @@ public interface MemoService {
     void deleteAll();
 
     void deleteById(Long id);
+
+    Memo findById(Long id);
+
+    void update(Memo newMemo);
 }
