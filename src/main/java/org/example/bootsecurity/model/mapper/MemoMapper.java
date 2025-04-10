@@ -24,4 +24,7 @@ public interface MemoMapper {
 
     @Delete("DELETE FROM memo")
     void deleteAll();
+
+    @Delete("DELETE FROM memo WHERE id = #{id}")
+    void deleteById(Long id);
 }

@@ -9,10 +9,19 @@
 </head>
 <body>
     <nav>
-        <form th:action="@{/delete-all}" method="post"><button>전체 삭제</button></form>
+        <form th:action="@{/delete-all}" th:method="post"><button>전체 삭제</button></form>
         <a th:href="@{/add}">등록</a>
     </nav>
     <p th:text="${msg}"></p>
-    <p th:text="${memoList}"></p>
+<!--    <p th:text="${memoList}"></p>-->
+    <section>
+        <ul>
+            <li th:each="memo : ${memoList}">
+                <span  th:text="${memo.text}"></span>
+                <form><button>수정</button></form>
+                <form th:method="post" th:action="@{/delete/{id}(id=${memo.id})}"><button>삭제</button></form>
+            </li>
+        </ul>
+    </section>
 </body>
 </html>

@@ -7,7 +7,10 @@ import java.util.List;
 
 public interface MemoService {
     List<Memo> findAll();
+
     void create(Memo memo) throws Exception;
 
     void deleteAll();
+
+    void deleteById(Long id);
 }
