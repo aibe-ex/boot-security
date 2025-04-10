@@ -1,0 +1,6 @@
+# 스프링
+spring:
+  application:
+    name: boot-security
+# 시큐리티
+# DB
